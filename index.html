@@ -86,7 +86,9 @@
             animation: imageSlideshow 21s linear infinite;
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: cover;
+            /* RECTIFICATION 1: Use 'contain' to show full image. Black background handles empty space. */
+            background-size: contain;
+            background-color: #000;
         }
         .hero-content h1 { font-size: 3.5rem; color: #fff; }
         .hero-content h1 span { color: var(--secondary-color); }
@@ -162,6 +164,11 @@
         .contact-item .icon {
             font-size: 1.5rem; color: var(--secondary-color);
             margin-right: 20px; width: 30px; text-align: center;
+            flex-shrink: 0; /* Prevents icon from shrinking */
+        }
+        /* RECTIFICATION 3: Added this class to fix alignment */
+        .contact-item-text {
+            flex: 1; /* Allows text to wrap properly beside the icon */
         }
         .contact-item p { margin: 0; line-height: 1.5; font-size: 1.1rem; color: #555; }
         .contact-item strong { display: block; margin-bottom: 5px; font-size: 1rem; color: #333; }
@@ -169,6 +176,7 @@
             margin-top: 8px;
             font-size: 1rem;
             line-height: 1.5;
+            word-break: break-all; /* Helps prevent long links from overflowing */
         }
         .contact-item .gmap-line a {
             color: #555;
@@ -193,10 +201,14 @@
             .practice-list { grid-template-columns: 1fr; gap: 0; }
         }
         @media (max-width: 768px) {
+            .navbar {
+                justify-content: center; /* Centers the logo when links are hidden */
+            }
+            /* RECTIFICATION 2: Hides navigation links on mobile */
+            .nav-links {
+                display: none;
+            }
             h2 { font-size: 2rem; }
-            .navbar { flex-direction: column; }
-            .nav-links { margin-top: 10px; padding-left: 0; }
-            .nav-links li { padding: 5px 10px; }
             .hero { height: 80vh; }
             .hero-content h1 { font-size: 2.5rem; }
             .hero-content p { font-size: 1.2rem; }
@@ -311,16 +323,18 @@
                     <h3>Contact Information</h3>
                     <div class="contact-item">
                         <div class="icon"><i class="fas fa-phone-alt"></i></div>
-                        <p><strong>Phone</strong> 8250751941</p>
+                        <div class="contact-item-text">
+                            <p><strong>Phone</strong></p>
+                            <p>8250751941</p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
+                        <div class="contact-item-text">
                             <p><strong>Address</strong></p>
                             <p>402, Srinivasa Apartment, Obamma Ln, Murugeshpalya, S R Layout, Bengaluru, Karnataka 560017</p>
                             <p class="gmap-line">
-                                <strong>Gmap link - </strong>
-                                <a href="https://maps.app.goo.gl/9kRAyuubECbeNAhT9" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">https://maps.app.goo.gl/9kRAyuubECbeNAhT9</a>
+                                <strong>Gmap link - </strong><a href="https://maps.app.goo.gl/9kRAyuubECbeNAhT9" target="_blank" rel="noopener noreferrer">https://maps.app.goo.gl/9kRAyuubECbeNAhT9</a>
                             </p>
                         </div>
                     </div>
