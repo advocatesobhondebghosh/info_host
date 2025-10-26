@@ -1,250 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advocate Sobhondeb Ghosh | Bengaluru</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advocate Sobhondeb Ghosh | Bengaluru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <style>
-        /* --- Global Styles & Theme Variables --- */
-        :root {
-            --primary-color: #333333;
-            --secondary-color: #c5a47e;
-            --dark-bg-practice: #4a4259;
-            --light-text-practice: #e3dcd2;
-            --background-color: #ffffff;
-            --light-gray-bg: #f7f7f7;
-            --warm-light-bg: #fdfaf5;
-            --heading-font: 'Merriweather', serif;
-            --body-font: 'Lato', sans-serif;
-        }
+  <style>
+    /* --- Global Styles & Theme Variables --- */
+    :root {
+      --primary-color: #333333;
+      --secondary-color: #c5a47e;
+      --dark-bg-practice: #4a4259;
+      --light-text-practice: #e3dcd2;
+      --background-color: #ffffff;
+      --light-gray-bg: #f7f7f7;
+      --warm-light-bg: #fdfaf5;
+      --heading-font: 'Merriweather', serif;
+      --body-font: 'Lato', sans-serif;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--body-font);
-            line-height: 1.6;
-            color: var(--primary-color);
-            background-color: var(--background-color);
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
-        h1, h2, h3 { font-family: var(--heading-font); font-weight: 700; }
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        h2::after {
-            content: ''; display: block; width: 70px; height: 3px;
-            background: var(--secondary-color); margin: 15px auto 0;
-        }
-        p { margin-bottom: 20px; font-size: 1.1rem; color: #555; }
-        section { padding: 80px 0; overflow-x: hidden; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body-font);
+      line-height: 1.6;
+      color: var(--primary-color);
+      background-color: var(--background-color);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+    h1, h2, h3 { font-family: var(--heading-font); font-weight: 700; }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    h2::after {
+      content: ''; display: block; width: 70px; height: 3px;
+      background: var(--secondary-color); margin: 15px auto 0;
+    }
+    p { margin-bottom: 20px; font-size: 1.1rem; color: #555; }
+    section { padding: 80px 0; overflow-x: hidden; }
 
-        /* --- Header & Navigation --- */
-        .header {
-            background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-        }
-        .navbar {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 30px; max-width: 1200px; margin: 0 auto;
-        }
-        .logo { font-family: var(--heading-font); font-size: 1.5rem; font-weight: 700; }
-        .nav-links { list-style: none; display: flex; }
-        .nav-links li { padding: 0 15px; }
-        .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--secondary-color); }
+    /* --- Header & Navigation --- */
+    .header {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed; width: 100%; top: 0; z-index: 1000;
+    }
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 30px; max-width: 1200px; margin: 0 auto;
+    }
+    .logo { font-family: var(--heading-font); font-size: 1.5rem; font-weight: 700; }
+    .nav-links { list-style: none; display: flex; }
+    .nav-links li { padding: 0 15px; }
+    .nav-links a {
+      text-decoration: none; color: var(--primary-color);
+      font-weight: 700; transition: color 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--secondary-color); }
 
-        /* --- Hero Section with Slideshow --- */
-        @keyframes imageSlideshow {
-            0%, 100% {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image1.jpg');
-            }
-            33% {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image2.jpg');
-            }
-            66% {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image3.jpg');
-            }
-        }
-        .hero {
-            height: 100vh; display: flex; justify-content: center; align-items: center;
-            text-align: center; color: #fff; padding: 0 20px;
-            animation: imageSlideshow 21s linear infinite;
-            background-repeat: no-repeat; background-position: center center;
-            background-size: contain; background-color: #000;
-        }
-        .hero-content h1 { font-size: 3.5rem; color: #fff; }
-        .hero-content h1 span { color: var(--secondary-color); }
-        .hero-content p { font-size: 1.5rem; margin: 20px auto 0 auto; max-width: 700px; color: rgba(255,255,255,0.9); }
+    /* --- Hero Section --- */
+    @keyframes imageSlideshow {
+      0%, 100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image1.jpg');
+      }
+      33% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image2.jpg');
+      }
+      66% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image3.jpg');
+      }
+    }
 
-        /* --- About Section --- */
-        .about-section { background-color: var(--light-gray-bg); }
-        .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+    .hero {
+      height: 100vh; display: flex; justify-content: center; align-items: center;
+      text-align: center; color: #fff; padding: 0 20px;
+      animation: imageSlideshow 21s linear infinite;
+      background-repeat: no-repeat; background-position: center;
+      background-size: contain; background-color: #000;
+    }
+    .hero-content h1 { font-size: 3.5rem; color: #fff; }
+    .hero-content h1 span { color: var(--secondary-color); }
+    .hero-content p { font-size: 1.5rem; margin: 20px auto 0 auto; max-width: 700px; color: rgba(255,255,255,0.9); }
 
-        /* --- Specialties --- */
-        .specialties-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
-        .specialty-card { border: 1px solid #eee; padding: 30px; border-radius: 5px; transition: all 0.3s ease; }
-        .specialty-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
-        .specialty-card .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 15px; }
-        .primary-tag {
-            display: inline-block; background: var(--secondary-color); color: white;
-            font-size: 0.7rem; padding: 3px 8px; border-radius: 10px; font-weight: bold;
-            text-transform: uppercase; margin-top: 10px;
-        }
+    /* --- About Section --- */
+    .about-section { background-color: var(--light-gray-bg); text-align: center; }
 
-        /* --- Practice Areas --- */
-        .practice-areas-section { background-color: var(--dark-bg-practice); }
-        .practice-container { display: flex; gap: 60px; }
-        .practice-description { flex: 1; padding-right: 30px; }
-        .practice-description h2 {
-            text-align: left; color: var(--light-text-practice); padding-bottom: 15px;
-            border-bottom: 1px solid rgba(227,220,210,0.5); margin-bottom: 25px;
-        }
-        .practice-description h2::after { display: none; }
-        .practice-description p { color: var(--light-text-practice); }
-        .practice-list-wrapper { flex: 2; }
-        .practice-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
-        .practice-list li {
-            border-bottom: 1px solid rgba(227,220,210,0.3); padding: 20px 0;
-            color: var(--light-text-practice); font-family: var(--heading-font);
-        }
-        .practice-list li::before { content: '→'; margin-right: 15px; color: var(--light-text-practice); }
+    /* --- Specialties --- */
+    .specialties-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px; text-align: center;
+    }
+    .specialty-card {
+      border: 1px solid #eee; padding: 30px; border-radius: 5px; transition: all 0.3s ease;
+    }
+    .specialty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    .specialty-card .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 15px; }
+    .primary-tag {
+      display: inline-block; background: var(--secondary-color); color: white;
+      font-size: 0.7rem; padding: 3px 8px; border-radius: 10px; font-weight: bold;
+      text-transform: uppercase; margin-top: 10px;
+    }
 
-        /* --- Working Hours --- */
-        .hours-section { background-color: var(--warm-light-bg); }
-        .hours-box { max-width: 600px; margin: 0 auto; text-align: center;
-            border: 1px solid #e0d9ce; padding: 40px; border-radius: 5px; }
-        .hours-box .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 15px; }
+    /* --- Practice Areas --- */
+    .practice-areas-section { background-color: var(--dark-bg-practice); }
+    .practice-container { display: flex; gap: 60px; }
+    .practice-description { flex: 1; padding-right: 30px; }
+    .practice-description h2 {
+      text-align: left; color: var(--light-text-practice);
+      padding-bottom: 15px; border-bottom: 1px solid rgba(227,220,210,0.5);
+      margin-bottom: 25px;
+    }
+    .practice-description h2::after { display: none; }
+    .practice-description p { color: var(--light-text-practice); }
+    .practice-list-wrapper { flex: 2; }
+    .practice-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+    .practice-list li {
+      border-bottom: 1px solid rgba(227,220,210,0.3); padding: 20px 0;
+      color: var(--light-text-practice); font-family: var(--heading-font);
+    }
 
-        /* ✅ Client Reviews Section (Added) */
-        .reviews-section {
-            background-color: var(--warm-light-bg);
-            text-align: center;
-            padding: 80px 0;
-        }
-        .review-images {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .review-image {
-            width: 320px;
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .review-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-        @media (max-width: 600px) {
-            .review-image { width: 90%; height: 300px; }
-        }
+    /* --- Working Hours --- */
+    .hours-section { background-color: var(--warm-light-bg); }
 
-        /* --- Contact Section --- */
-        .contact-section { background-color: var(--background-color); }
-        .contact-wrapper {
-            display: flex; gap: 50px; align-items: center;
-            background: var(--light-gray-bg); padding: 50px; border-radius: 8px;
-        }
+    /* ✅ Client Reviews Section (Added Only) */
+    .reviews-section {
+      background-color: var(--light-gray-bg);
+      text-align: center;
+      padding: 80px 0;
+    }
+    .review-images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .review-image {
+      width: 320px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .review-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 600px) {
+      .review-image { width: 90%; height: 300px; }
+    }
 
-        /* --- Footer --- */
-        .footer { background-color: #333; color: #aaa; text-align: center; padding: 40px 0; }
+    /* --- Contact Section --- */
+    .contact-section { background-color: var(--background-color); }
+    .contact-wrapper {
+      display: flex; gap: 50px; align-items: center;
+      background: var(--light-gray-bg); padding: 50px; border-radius: 8px;
+    }
 
-        /* --- Responsive --- */
-        @media (max-width: 900px) {
-            .practice-container, .contact-wrapper { flex-direction: column; }
-            .practice-list { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero { height: 80vh; }
-        }
-    </style>
+    /* --- Footer --- */
+    .footer { background-color: #333; color: #aaa; text-align: center; padding: 40px 0; }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .practice-container, .contact-wrapper { flex-direction: column; }
+      .practice-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { height: 80vh; }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
+  <!-- Header -->
+  <header class="header">
     <nav class="navbar">
-        <div class="logo">Advocate Sobhondeb Ghosh</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#specialties">Specialties</a></li>
-            <li><a href="#practice-areas">Practice Areas</a></li>
-            <li><a href="#hours">Hours</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="logo">Advocate Sobhondeb Ghosh</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#specialties">Specialties</a></li>
+        <li><a href="#practice-areas">Practice Areas</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section id="home" class="hero">
+  <!-- Hero -->
+  <section id="home" class="hero">
     <div class="container hero-content">
-        <h1>Expert Legal Counsel in <span>Bengaluru</span></h1>
-        <p>A beacon of justice, delivering exceptional legal services with an unwavering commitment to protecting your rights and interests.</p>
+      <h1>Expert Legal Counsel in <span>Bengaluru</span></h1>
+      <p>A beacon of justice, delivering exceptional legal services with an unwavering commitment to protecting your rights and interests.</p>
     </div>
-</section>
+  </section>
 
-<section id="about" class="about-section">
+  <!-- About -->
+  <section id="about" class="about-section">
     <div class="container">
-        <div class="about-content">
-            <h2>A Skilled & Dedicated Legal Professional</h2>
-            <p>Advocate Sobhondeb Ghosh stands as a beacon of justice in Murgeshpalya...</p>
-        </div>
+      <div class="about-content">
+        <h2>A Skilled & Dedicated Legal Professional</h2>
+        <p>Advocate Sobhondeb Ghosh stands as a beacon of justice in Murgeshpalya...</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- (specialties, practice-areas, hours all same) -->
-
-<section id="hours" class="hours-section">
+  <!-- Specialties -->
+  <section id="specialties" class="specialties-section">
     <div class="container">
-        <h2>Working Hours</h2>
-        <div class="hours-box">
-            <div class="icon">&#128337;</div>
-            <h3>Available 24/7 for Your Legal Needs</h3>
-        </div>
+      <h2>Legal Specialties</h2>
+      <div class="specialties-grid">
+        <div class="specialty-card"><div class="icon">&#128148;</div><h3>Divorce Lawyer</h3></div>
+        <div class="specialty-card"><div class="icon">&#9878;</div><h3>Civil Law Attorney</h3></div>
+        <div class="specialty-card"><div class="icon">&#127968;</div><h3>Property Lawyer</h3></div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ✅ Client Reviews Section -->
-<section class="reviews-section">
-    <div class="container">
-        <h2>Client Reviews</h2>
-        <p style="max-width:700px;margin:0 auto;">
-            Hear from satisfied clients who have trusted Advocate Sobhondeb Ghosh for their legal needs.
-        </p>
-        <div class="review-images">
-            <div class="review-image" style="background-image: url('image4.jpg');"></div>
-            <div class="review-image" style="background-image: url('image5.jpg');"></div>
-        </div>
+  <!-- Practice Areas -->
+  <section id="practice-areas" class="practice-areas-section">
+    <div class="container practice-container">
+      <div class="practice-description">
+        <h2>Practice Areas</h2>
+        <p>Expert legal representation across a wide range of personal and corporate matters.</p>
+      </div>
+      <div class="practice-list-wrapper">
+        <ul class="practice-list">
+          <li>Divorce Lawyer</li>
+          <li>Civil Law Attorney</li>
+          <li>Property Lawyer</li>
+        </ul>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="contact" class="contact-section">
+  <!-- Hours -->
+  <section id="hours" class="hours-section">
     <div class="container">
-        <h2>Get In Touch</h2>
-        <div class="contact-wrapper">
-            <!-- unchanged contact content -->
-        </div>
+      <h2>Working Hours</h2>
+      <p style="text-align:center;">Available 24/7 for your legal needs</p>
     </div>
-</section>
+  </section>
 
-<footer class="footer">
+  <!-- ✅ Client Reviews -->
+  <section class="reviews-section">
     <div class="container">
-        <p>&copy; 2025 Advocate Sobhondeb Ghosh | All Rights Reserved</p>
+      <h2>Client Reviews</h2>
+      <p style="max-width:700px;margin:0 auto;">
+        Hear from satisfied clients who have trusted Advocate Sobhondeb Ghosh for their legal needs.
+      </p>
+      <div class="review-images">
+        <div class="review-image" style="background-image: url('image4.jpg');"></div>
+        <div class="review-image" style="background-image: url('image5.jpg');"></div>
+      </div>
     </div>
-</footer>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-wrapper">
+        <p><strong>Phone:</strong> 8250751491</p>
+        <p><strong>Address:</strong> 402, Srinivasa Apartment, Obamma Ln, Murugeshpalya, Bengaluru, Karnataka 560017</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Advocate Sobhondeb Ghosh | All Rights Reserved</p>
+    </div>
+  </footer>
 
 </body>
 </html>
