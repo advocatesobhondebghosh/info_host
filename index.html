@@ -159,10 +159,12 @@
           gap: 30px;
           margin-top: 30px;
         }
+        .review-image-link {
+          display: block; /* Ensures the link takes up the div's space */
+        }
         .review-image {
           width: 320px;
           height: 400px;
-          /* ✅ RECTIFICATION: 'contain' displays the full image without cropping */
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -199,7 +201,6 @@
             text-decoration: none;
             transition: opacity 0.3s ease;
         }
-        /* ✅ RECTIFICATION: Specific style to make the phone number link blue */
         .phone-link {
             color: #0000ff; /* Blue color */
         }
@@ -359,8 +360,13 @@
             Hear from satisfied clients who have trusted Advocate Sobhondeb Ghosh for their legal needs.
           </p>
           <div class="review-images">
-            <div class="review-image" style="background-image: url('image4.jpg');"></div>
-            <div class="review-image" style="background-image: url('image5.jpg');"></div>
+            <!-- ✅ RECTIFICATION: Images are now wrapped in anchor tags to make them clickable -->
+            <a href="image4.jpg" target="_blank" rel="noopener noreferrer" class="review-image-link">
+                <div class="review-image" style="background-image: url('image4.jpg');"></div>
+            </a>
+            <a href="image5.jpg" target="_blank" rel="noopener noreferrer" class="review-image-link">
+                <div class="review-image" style="background-image: url('image5.jpg');"></div>
+            </a>
           </div>
         </div>
     </section>
