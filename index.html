@@ -1,366 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advocate Sobhondeb Ghosh | Bengaluru</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advocate Sobhondeb Ghosh | Bengaluru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <style>
-        /* --- Global Styles & Theme Variables --- */
-        :root {
-            --primary-color: #333333; /* Dark text color */
-            --secondary-color: #c5a47e; /* Gold accent */
-            --dark-bg-practice: #4a4259; /* Muted Purple for Practice Section */
-            --light-text-practice: #e3dcd2; /* Off-white text for Practice Section */
-            --background-color: #ffffff; /* White */
-            --light-gray-bg: #f7f7f7;
-            --warm-light-bg: #fdfaf5; /* Soft warm background for hours */
-            --heading-font: 'Merriweather', serif;
-            --body-font: 'Lato', sans-serif;
-        }
+  <style>
+    /* --- Global Styles & Theme Variables --- */
+    :root {
+      --primary-color: #333333;
+      --secondary-color: #c5a47e;
+      --dark-bg-practice: #4a4259;
+      --light-text-practice: #e3dcd2;
+      --background-color: #ffffff;
+      --light-gray-bg: #f7f7f7;
+      --warm-light-bg: #fdfaf5;
+      --heading-font: 'Merriweather', serif;
+      --body-font: 'Lato', sans-serif;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--body-font);
-            line-height: 1.6;
-            color: var(--primary-color);
-            background-color: var(--background-color);
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
-        h1, h2, h3 { font-family: var(--heading-font); font-weight: 700; }
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        h2::after {
-            content: ''; display: block; width: 70px; height: 3px;
-            background: var(--secondary-color); margin: 15px auto 0;
-        }
-        p { margin-bottom: 20px; font-size: 1.1rem; color: #555; }
-        section { padding: 80px 0; overflow-x: hidden; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body-font);
+      line-height: 1.6;
+      color: var(--primary-color);
+      background-color: var(--background-color);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+    h1, h2, h3 { font-family: var(--heading-font); font-weight: 700; }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    h2::after {
+      content: ''; display: block; width: 70px; height: 3px;
+      background: var(--secondary-color); margin: 15px auto 0;
+    }
+    p { margin-bottom: 20px; font-size: 1.1rem; color: #555; }
+    section { padding: 80px 0; overflow-x: hidden; }
 
-        /* --- Header & Navigation --- */
-        .header {
-            background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-        }
-        .navbar {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 30px; max-width: 1200px; margin: 0 auto;
-        }
-        .logo { font-family: var(--heading-font); font-size: 1.5rem; font-weight: 700; }
-        .nav-links { list-style: none; display: flex; }
-        .nav-links li { padding: 0 15px; }
-        .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--secondary-color); }
-        
-        /* --- Hero Section with Slideshow --- */
-        @keyframes imageSlideshow {
-            0%, 100% {
-                /* ===> STEP 4: REPLACE THIS with your first image name */
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image1.jpg');
-            }
-            33% {
-                /* ===> STEP 4: REPLACE THIS with your second image name */
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image2.jpg');
-            }
-            66% {
-                /* ===> STEP 4: REPLACE THIS with your third image name */
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image3.jpg');
-            }
-        }
+    /* --- Header & Navigation --- */
+    .header {
+      background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed; width: 100%; top: 0; z-index: 1000;
+    }
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 30px; max-width: 1200px; margin: 0 auto;
+    }
+    .logo { font-family: var(--heading-font); font-size: 1.5rem; font-weight: 700; }
+    .nav-links { list-style: none; display: flex; }
+    .nav-links li { padding: 0 15px; }
+    .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s ease; }
+    .nav-links a:hover { color: var(--secondary-color); }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
-            animation: imageSlideshow 21s linear infinite;
-            background-repeat: no-repeat;
-            background-position: center center;
-            /* RECTIFICATION 1: Use 'contain' to show full image. Black background handles empty space. */
-            background-size: contain;
-            background-color: #000;
-        }
-        .hero-content h1 { font-size: 3.5rem; color: #fff; }
-        .hero-content h1 span { color: var(--secondary-color); }
-        .hero-content p { font-size: 1.5rem; margin: 20px auto 0 auto; max-width: 700px; color: rgba(255, 255, 255, 0.9); }
+    /* --- Hero Section --- */
+    @keyframes imageSlideshow {
+      0%, 100% {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image1.jpg');
+      }
+      33% {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image2.jpg');
+      }
+      66% {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image3.jpg');
+      }
+    }
 
-        /* --- About Section (No Image) --- */
-        .about-section { background-color: var(--light-gray-bg); }
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .about-content h2::after {
-            margin: 15px auto 0;
-        }
-        
-        /* --- Legal Specialties Section --- */
-        .specialties-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
-        .specialty-card { border: 1px solid #eee; padding: 30px; border-radius: 5px; transition: all 0.3s ease; }
-        .specialty-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
-        .specialty-card .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 15px; }
-        .specialty-card h3 { margin-bottom: 10px; font-size: 1.4rem; }
-        .primary-tag {
-            display: inline-block; background: var(--secondary-color); color: white; font-size: 0.7rem;
-            padding: 3px 8px; border-radius: 10px; font-weight: bold; text-transform: uppercase; margin-top: 10px;
-        }
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+      animation: imageSlideshow 21s linear infinite;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-color: #000;
+    }
+    .hero-content h1 { font-size: 3.5rem; color: #fff; }
+    .hero-content h1 span { color: var(--secondary-color); }
+    .hero-content p { font-size: 1.5rem; margin: 20px auto 0 auto; max-width: 700px; color: rgba(255, 255, 255, 0.9); }
 
-        /* --- Practice Areas Section --- */
-        .practice-areas-section { background-color: var(--dark-bg-practice); }
-        .practice-container { display: flex; gap: 60px; }
-        .practice-description { flex: 1; padding-right: 30px; }
-        .practice-description h2 {
-            text-align: left; color: var(--light-text-practice); padding-bottom: 15px;
-            border-bottom: 1px solid rgba(227, 220, 210, 0.5); margin-bottom: 25px;
-        }
-        .practice-description h2::after { display: none; }
-        .practice-description p { font-family: var(--heading-font); color: var(--light-text-practice); font-size: 1.1rem; line-height: 1.8; }
-        .practice-list-wrapper { flex: 2; }
-        .practice-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
-        .practice-list li {
-            border-bottom: 1px solid rgba(227, 220, 210, 0.3); padding: 20px 0;
-            color: var(--light-text-practice); font-family: var(--heading-font); font-size: 1.2rem;
-        }
-        .practice-list li::before { content: '→'; margin-right: 15px; color: var(--light-text-practice); }
+    /* --- About --- */
+    .about-section { background-color: var(--light-gray-bg); }
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        /* --- Working Hours Section --- */
-        .hours-section { background-color: var(--warm-light-bg); }
-        .hours-box {
-            max-width: 600px; margin: 0 auto; text-align: center;
-            border: 1px solid #e0d9ce; padding: 40px; border-radius: 5px;
-        }
-        .hours-box .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 15px; }
-        .hours-box h3 { font-size: 1.5rem; margin-bottom: 20px; }
-        .hours-list { list-style: none; padding: 0; }
-        .hours-list li {
-            display: flex; justify-content: space-between;
-            padding: 10px 0; border-bottom: 1px solid #eeebe4; font-size: 1.1rem;
-        }
-        .hours-list li:last-child { border-bottom: none; }
-        .hours-list span:first-child { font-weight: bold; }
+    /* --- Contact Section --- */
+    .contact-section { background-color: var(--background-color); }
+    .contact-wrapper {
+      display: flex; gap: 50px; align-items: center;
+      background: var(--light-gray-bg); padding: 50px; border-radius: 8px;
+    }
+    .contact-details { flex: 1; }
+    .contact-details h3 {
+      font-size: 1.8rem; text-align: left; margin-bottom: 25px;
+    }
+    .contact-item { display: flex; align-items: flex-start; margin-bottom: 25px; }
+    .contact-item .icon {
+      font-size: 1.5rem; color: var(--secondary-color);
+      margin-right: 20px; width: 30px; text-align: center;
+      flex-shrink: 0;
+    }
+    .contact-item-text { flex: 1; }
+    .contact-item p { margin: 0; line-height: 1.5; font-size: 1.1rem; color: #555; }
+    .contact-item strong { display: block; margin-bottom: 5px; font-size: 1rem; color: #333; }
 
-        /* --- Contact Section --- */
-        .contact-section { background-color: var(--background-color); }
-        .contact-wrapper {
-            display: flex; gap: 50px; align-items: center;
-            background: var(--light-gray-bg); padding: 50px; border-radius: 8px;
-        }
-        .contact-details { flex: 1; }
-        .contact-details h3 {
-            font-size: 1.8rem; text-align: left; margin-bottom: 25px;
-        }
-        .contact-item { display: flex; align-items: flex-start; margin-bottom: 25px; }
-        .contact-item .icon {
-            font-size: 1.5rem; color: var(--secondary-color);
-            margin-right: 20px; width: 30px; text-align: center;
-            flex-shrink: 0; /* Prevents icon from shrinking */
-        }
-        /* RECTIFICATION 3: Added this class to fix alignment */
-        .contact-item-text {
-            flex: 1; /* Allows text to wrap properly beside the icon */
-        }
-        .contact-item p { margin: 0; line-height: 1.5; font-size: 1.1rem; color: #555; }
-        .contact-item strong { display: block; margin-bottom: 5px; font-size: 1rem; color: #333; }
-        .contact-item .gmap-line {
-            margin-top: 8px;
-            font-size: 1rem;
-            line-height: 1.5;
-            word-break: break-all; /* Helps prevent long links from overflowing */
-        }
-        .contact-item .gmap-line a {
-            color: #555;
-            text-decoration: none;
-        }
-        .contact-item .gmap-line a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
-        .map-embed { flex: 1; }
-        .map-embed iframe { width: 100%; height: 350px; border: 0; border-radius: 5px; }
+    /* --- Reviews Section --- */
+    .reviews-section {
+      background-color: var(--warm-light-bg);
+      text-align: center;
+      padding: 80px 0;
+    }
+    .review-images {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .review-image {
+      width: 320px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .review-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
 
-        /* --- Footer --- */
-        .footer { background-color: #333; color: #aaa; text-align: center; padding: 40px 0; }
-        .footer p { color: #aaa; margin: 5px 0; }
-        .footer a { color: var(--secondary-color); text-decoration: none; transition: text-decoration 0.3s ease; }
-        .footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .review-images { gap: 15px; }
+      .review-image {
+        width: 90%;
+        height: 300px;
+      }
+    }
 
-        /* --- Responsive Design (Mobile Friendly Styles) --- */
-        @media (max-width: 900px) {
-            .practice-container, .contact-wrapper { flex-direction: column; }
-            .practice-list { grid-template-columns: 1fr; gap: 0; }
-        }
-        @media (max-width: 768px) {
-            .navbar {
-                justify-content: center; /* Centers the logo when links are hidden */
-            }
-            /* RECTIFICATION 2: Hides navigation links on mobile */
-            .nav-links {
-                display: none;
-            }
-            h2 { font-size: 2rem; }
-            .hero { height: 80vh; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .hero-content p { font-size: 1.2rem; }
-            .contact-wrapper { padding: 30px; }
-        }
-    </style>
+    /* --- Footer --- */
+    .footer { background-color: #333; color: #aaa; text-align: center; padding: 40px 0; }
+    .footer p { color: #aaa; margin: 5px 0; }
+    .footer a { color: var(--secondary-color); text-decoration: none; transition: text-decoration 0.3s ease; }
+    .footer a:hover { text-decoration: underline; }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .contact-wrapper { flex-direction: column; }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Advocate Sobhondeb Ghosh</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#specialties">Specialties</a></li>
+        <li><a href="#practice-areas">Practice Areas</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">Advocate Sobhondeb Ghosh</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#specialties">Specialties</a></li>
-                <li><a href="#practice-areas">Practice Areas</a></li>
-                <li><a href="#hours">Hours</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Expert Legal Counsel in <span>Bengaluru</span></h1>
+      <p>A beacon of justice, delivering exceptional legal services with an unwavering commitment to protecting your rights and interests.</p>
+    </div>
+  </section>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Expert Legal Counsel in <span>Bengaluru</span></h1>
-            <p>A beacon of justice, delivering exceptional legal services with an unwavering commitment to protecting your rights and interests.</p>
-        </div>
-    </section>
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <h2>A Skilled & Dedicated Legal Professional</h2>
+        <p>Advocate Sobhondeb Ghosh stands as a beacon of justice in Murgeshpalya. With his office conveniently located in S R Layout, Bengaluru, Advocate Ghosh is passionate about delivering exceptional legal services.</p>
+        <p>Offering expert counsel and representation, he works tirelessly to protect the rights and interests of his clients. Trust in Advocate Sobhondeb Ghosh's unwavering commitment to delivering fair outcomes and experience the difference dedicated legal advocacy can make.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2>A Skilled & Dedicated Legal Professional</h2>
-                <p>Advocate Sobhondeb Ghosh stands as a beacon of justice in Murgeshpalya. With his office conveniently located in S R Layout, Bengaluru, Advocate Ghosh is passionate about delivering exceptional legal services.</p>
-                <p>Offering expert counsel and representation, he works tirelessly to protect the rights and interests of his clients. Trust in Advocate Sobhondeb Ghosh's unwavering commitment to delivering fair outcomes and experience the difference dedicated legal advocacy can make.</p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-wrapper">
+        <div class="contact-details">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-item-text">
+              <p><strong>Phone</strong></p>
+              <p><a href="tel:+918250751491" style="color: #c5a47e; font-weight: bold; text-decoration: none;">+91 8250751491</a></p>
             </div>
-        </div>
-    </section>
-
-    <section id="specialties" class="specialties-section">
-        <div class="container">
-            <h2>Legal Specialties</h2>
-            <div class="specialties-grid">
-                <div class="specialty-card">
-                    <div class="icon">&#128148;</div>
-                    <h3>Divorce Lawyer</h3>
-                    <span class="primary-tag">Primary</span>
-                </div>
-                <div class="specialty-card">
-                    <div class="icon">&#9878;</div>
-                    <h3>Civil Law Attorney</h3>
-                </div>
-                <div class="specialty-card">
-                    <div class="icon">&#127968;</div>
-                    <h3>Property Lawyer</h3>
-                </div>
-                <div class="specialty-card">
-                    <div class="icon">&#128737;</div>
-                    <h3>Criminal Defence Lawyer</h3>
-                </div>
-                <div class="specialty-card">
-                    <div class="icon">&#129309;</div>
-                    <h3>Corporate and Contracts Lawyer</h3>
-                </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-item-text">
+              <p><strong>Address</strong></p>
+              <p>402, Srinivasa Apartment, Obamma Ln, Murugeshpalya, S R Layout, Bengaluru, Karnataka 560017</p>
+              <p class="gmap-line">
+                <strong>Gmap link - </strong>
+                <a href="https://maps.app.goo.gl/9kRAyuubECbeNAhT9" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">https://maps.app.goo.gl/9kRAyuubECbeNAhT9</a>
+              </p>
             </div>
+          </div>
         </div>
-    </section>
 
-    <section id="practice-areas" class="practice-areas-section">
-        <div class="container practice-container">
-            <div class="practice-description">
-                <h2>Practice Areas</h2>
-                <p>Expert legal representation across a wide range of personal and corporate matters. We are especially skilled in the following practice areas:</p>
-            </div>
-            <div class="practice-list-wrapper">
-                <ul class="practice-list">
-                    <li>Divorce Lawyer</li>
-                    <li>Civil Law Attorney</li>
-                    <li>Property Lawyer</li>
-                    <li>Criminal Defence Lawyer</li>
-                    <li>Corporate and Contracts Lawyer</li>
-                </ul>
-            </div>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.134546416954!2d77.65481307581179!3d12.963236714909873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13e2f056501d%3A0xe443e0f9b3aea41!2s402%2C%20Srinivasa%20Apartment%2C%20Obamma%20Ln%2C%20Murugeshpalya%2C%20S%20R%20Layout%2C%20Bengaluru%2C%20Karnataka%20560017!5e0!3m2!1sen!2sin!4v1715873291244!5m2!1sen!2sin" width="100%" height="350" style="border: 0; border-radius: 5px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section>
-    
-    <section id="hours" class="hours-section">
-        <div class="container">
-            <h2>Working Hours</h2>
-            <div class="hours-box">
-                <div class="icon">&#128337;</div>
-                <h3>Available 24/7 for Your Legal Needs</h3>
-                 <ul class="hours-list">
-                    <li><span>Monday</span> <span>Open 24 hours</span></li>
-                    <li><span>Tuesday</span> <span>Open 24 hours</span></li>
-                    <li><span>Wednesday</span> <span>Open 24 hours</span></li>
-                    <li><span>Thursday</span> <span>Open 24 hours</span></li>
-                    <li><span>Friday</span> <span>Open 24 hours</span></li>
-                    <li><span>Saturday</span> <span>Open 24 hours</span></li>
-                    <li><span>Sunday</span> <span>Open 24 hours</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-details">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="contact-item-text">
-                            <p><strong>Phone</strong></p>
-                            <p>8250751491</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-item-text">
-                            <p><strong>Address</strong></p>
-                            <p>402, Srinivasa Apartment, Obamma Ln, Murugeshpalya, S R Layout, Bengaluru, Karnataka 560017</p>
-                            <p class="gmap-line">
-                                <strong>Gmap link - </strong>
-                                <a href="https://maps.app.goo.gl/9kRAyuubECbeNAhT9" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">
-                                    https://maps.app.goo.gl/9kRAyuubECbeNAhT9
-                                </a>
-                            </p>
+  <!-- Review Section -->
+  <section class="reviews-section">
+    <div class="container">
+      <h2>Client Reviews</h2>
+      <p style="max-width:700px;margin:0 auto;">
+        Hear from satisfied clients who have trusted Advocate Sobhondeb Ghosh for their legal needs.
+      </p>
+      <div class="review-images">
+        <div class="review-image" style="background-image: url('image4.jpg');"></div>
+        <div class="review-image" style="background-image: url('image5.jpg');"></div>
+      </div>
+    </div>
+  </section>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="map-embed">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.134546416954!2d77.65481307581179!3d12.963236714909873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13e2f056501d%3A0xe443e0f9b3aea41!2s402%2C%20Srinivasa%20Apartment%2C%20Obamma%20Ln%2C%20Murugeshpalya%2C%20S%20R%20Layout%2C%20Bengaluru%2C%20Karnataka%20560017!5e0!3m2!1sen!2sin!4v1715873291244!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Advocate Sobhondeb Ghosh | All Rights Reserved</p>
-            <p>
-                <a href="#">Privacy Policy</a> | 
-                <a href="#">Disclaimer</a>
-            </p>
-        </div>
-    </footer>
-
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Advocate Sobhondeb Ghosh | All Rights Reserved</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a></p>
+    </div>
+  </footer>
 </body>
 </html>
-
-
