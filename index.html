@@ -72,7 +72,9 @@
             }
         }
 
+        /* ✅ RECTIFICATION FOR SLIDESHOW */
         .hero {
+            position: relative; /* Needed for the ::before pseudo-element */
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -80,12 +82,36 @@
             text-align: center;
             color: #fff;
             padding: 0 20px;
+            
+            /* This is the FOREGROUND image (sharp and fully visible) */
             animation: imageSlideshow 21s linear infinite;
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: contain;
-            background-color: #000;
+            background-size: contain; 
         }
+
+        /* This is the new BACKGROUND layer (blurred and covers the screen) */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1; /* Place it behind the main hero content */
+
+            animation: imageSlideshow 21s linear infinite;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover; /* This layer covers the whole screen */
+            filter: blur(20px) brightness(0.8); /* Blur and darken it */
+            transform: scale(1.1); /* Slightly scale up to hide blurred edges */
+        }
+
+        .hero-content {
+            /* This ensures the text stays on top of both layers */
+            position: relative;
+            z-index: 1;
+        }
+        /* End of slideshow rectification */
+
         .hero-content h1 { font-size: 3.5rem; color: #fff; }
         .hero-content h1 span { color: var(--secondary-color); }
         .hero-content p { font-size: 1.5rem; margin: 20px auto 0 auto; max-width: 700px; color: rgba(255, 255, 255, 0.9); }
@@ -159,10 +185,8 @@
           gap: 30px;
           margin-top: 30px;
         }
-        .review-image-link {
-          display: block; /* Ensures the link takes up the div's space */
-        }
         .review-image {
+          display: block; 
           width: 320px;
           height: 400px;
           background-size: contain;
@@ -202,7 +226,7 @@
             transition: opacity 0.3s ease;
         }
         .phone-link {
-            color: #0000ff; /* Blue color */
+            color: #0000ff;
         }
         .phone-link:hover {
             opacity: 0.8;
@@ -230,7 +254,7 @@
         .footer a { color: var(--secondary-color); text-decoration: none; transition: text-decoration 0.3s ease; }
         .footer a:hover { text-decoration: underline; }
 
-        /* --- Responsive Design (Mobile Friendly Styles) --- */
+        /* --- Responsive Design --- */
         @media (max-width: 900px) {
             .practice-container, .contact-wrapper { flex-direction: column; }
             .practice-list { grid-template-columns: 1fr; gap: 0; }
@@ -249,7 +273,10 @@
             .contact-wrapper { padding: 30px; }
         }
         @media (max-width: 600px) {
-            .review-image { width: 90%; height: 300px; }
+            .review-image {
+                width: 90%;
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -360,13 +387,8 @@
             Hear from satisfied clients who have trusted Advocate Sobhondeb Ghosh for their legal needs.
           </p>
           <div class="review-images">
-            <!-- ✅ RECTIFICATION: Images are now wrapped in anchor tags to make them clickable -->
-            <a href="image4.jpg" target="_blank" rel="noopener noreferrer" class="review-image-link">
-                <div class="review-image" style="background-image: url('image4.jpg');"></div>
-            </a>
-            <a href="image5.jpg" target="_blank" rel="noopener noreferrer" class="review-image-link">
-                <div class="review-image" style="background-image: url('image5.jpg');"></div>
-            </a>
+            <a href="image4.jpg" target="_blank" rel="noopener noreferrer" class="review-image" style="background-image: url('image4.jpg');"></a>
+            <a href="image5.jpg" target="_blank" rel="noopener noreferrer" class="review-image" style="background-image: url('image5.jpg');"></a>
           </div>
         </div>
     </section>
