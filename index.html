@@ -8,12 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
-    /* --- Global Styles & Theme Variables --- */
     :root {
       --primary-color: #333333;
       --secondary-color: #c5a47e;
-      --dark-bg-practice: #4a4259;
-      --light-text-practice: #e3dcd2;
       --background-color: #ffffff;
       --light-gray-bg: #f7f7f7;
       --warm-light-bg: #fdfaf5;
@@ -25,12 +22,13 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: var(--body-font);
-      line-height: 1.6;
       color: var(--primary-color);
       background-color: var(--background-color);
+      line-height: 1.6;
     }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
-    h1, h2, h3 { font-family: var(--heading-font); font-weight: 700; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3 { font-family: var(--heading-font); font-weight: 700; color: var(--primary-color); }
     h2 {
       font-size: 2.5rem;
       text-align: center;
@@ -38,87 +36,137 @@
       position: relative;
     }
     h2::after {
-      content: ''; display: block; width: 70px; height: 3px;
-      background: var(--secondary-color); margin: 15px auto 0;
+      content: '';
+      display: block;
+      width: 70px;
+      height: 3px;
+      background: var(--secondary-color);
+      margin: 15px auto 0;
     }
-    p { margin-bottom: 20px; font-size: 1.1rem; color: #555; }
-    section { padding: 80px 0; overflow-x: hidden; }
 
-    /* --- Header & Navigation --- */
-    .header {
-      background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: fixed; width: 100%; top: 0; z-index: 1000;
+    /* Header */
+    header {
+      background: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .navbar {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 15px 30px; max-width: 1200px; margin: 0 auto;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
     }
-    .logo { font-family: var(--heading-font); font-size: 1.5rem; font-weight: 700; }
-    .nav-links { list-style: none; display: flex; }
-    .nav-links li { padding: 0 15px; }
-    .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s ease; }
-    .nav-links a:hover { color: var(--secondary-color); }
+    .logo {
+      font-family: var(--heading-font);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    .nav-links li {
+      margin-left: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: var(--secondary-color);
+    }
 
-    /* --- Hero Section --- */
+    /* Hero */
     @keyframes imageSlideshow {
-      0%, 100% {
-        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image1.jpg');
-      }
-      33% {
-        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image2.jpg');
-      }
-      66% {
-        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image3.jpg');
-      }
+      0%, 100% { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image1.jpg'); }
+      33% { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image2.jpg'); }
+      66% { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image3.jpg'); }
     }
 
     .hero {
       height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: #000;
+      animation: imageSlideshow 21s linear infinite;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: #fff;
       padding: 0 20px;
-      animation: imageSlideshow 21s linear infinite;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
-      background-color: #000;
     }
-    .hero-content h1 { font-size: 3.5rem; color: #fff; }
-    .hero-content h1 span { color: var(--secondary-color); }
-    .hero-content p { font-size: 1.5rem; margin: 20px auto 0 auto; max-width: 700px; color: rgba(255, 255, 255, 0.9); }
 
-    /* --- About --- */
-    .about-section { background-color: var(--light-gray-bg); }
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #fff;
+    }
+    .hero h1 span { color: var(--secondary-color); }
+    .hero p {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 20px;
+    }
+
+    /* About Section */
+    .about-section {
+      background-color: var(--light-gray-bg);
+      padding: 80px 0;
+    }
     .about-content {
+      text-align: center;
       max-width: 800px;
       margin: 0 auto;
-      text-align: center;
     }
 
-    /* --- Contact Section --- */
-    .contact-section { background-color: var(--background-color); }
+    /* Contact Section */
+    .contact-section {
+      background: var(--background-color);
+      padding: 80px 0;
+    }
     .contact-wrapper {
-      display: flex; gap: 50px; align-items: center;
-      background: var(--light-gray-bg); padding: 50px; border-radius: 8px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      background: var(--light-gray-bg);
+      padding: 40px;
+      border-radius: 8px;
     }
     .contact-details { flex: 1; }
-    .contact-details h3 {
-      font-size: 1.8rem; text-align: left; margin-bottom: 25px;
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
     }
-    .contact-item { display: flex; align-items: flex-start; margin-bottom: 25px; }
     .contact-item .icon {
-      font-size: 1.5rem; color: var(--secondary-color);
-      margin-right: 20px; width: 30px; text-align: center;
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+      margin-right: 15px;
+      width: 30px;
+      text-align: center;
       flex-shrink: 0;
     }
-    .contact-item-text { flex: 1; }
-    .contact-item p { margin: 0; line-height: 1.5; font-size: 1.1rem; color: #555; }
-    .contact-item strong { display: block; margin-bottom: 5px; font-size: 1rem; color: #333; }
+    .contact-item strong { color: var(--primary-color); display: block; margin-bottom: 5px; }
+    .contact-item p { margin: 0; font-size: 1.1rem; color: #555; }
 
-    /* --- Reviews Section --- */
+    .map-embed iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-wrapper { flex-direction: column; }
+    }
+
+    /* ✅ Client Reviews Section */
     .reviews-section {
       background-color: var(--warm-light-bg);
       text-align: center;
@@ -127,8 +175,8 @@
     .review-images {
       display: flex;
       justify-content: center;
-      gap: 30px;
       flex-wrap: wrap;
+      gap: 30px;
       margin-top: 30px;
     }
     .review-image {
@@ -145,31 +193,29 @@
       transform: scale(1.05);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
-
     @media (max-width: 600px) {
       .review-images { gap: 15px; }
-      .review-image {
-        width: 90%;
-        height: 300px;
-      }
+      .review-image { width: 90%; height: 300px; }
     }
 
-    /* --- Footer --- */
-    .footer { background-color: #333; color: #aaa; text-align: center; padding: 40px 0; }
-    .footer p { color: #aaa; margin: 5px 0; }
-    .footer a { color: var(--secondary-color); text-decoration: none; transition: text-decoration 0.3s ease; }
-    .footer a:hover { text-decoration: underline; }
-
-    /* --- Responsive --- */
-    @media (max-width: 900px) {
-      .contact-wrapper { flex-direction: column; }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #aaa;
+      text-align: center;
+      padding: 40px 0;
     }
+    footer a {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar">
+  <header>
+    <nav>
       <div class="logo">Advocate Sobhondeb Ghosh</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -183,57 +229,50 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="container hero-content">
+    <div>
       <h1>Expert Legal Counsel in <span>Bengaluru</span></h1>
-      <p>A beacon of justice, delivering exceptional legal services with an unwavering commitment to protecting your rights and interests.</p>
+      <p>A beacon of justice, delivering exceptional legal services with dedication and integrity.</p>
     </div>
   </section>
 
   <section id="about" class="about-section">
-    <div class="container">
-      <div class="about-content">
-        <h2>A Skilled & Dedicated Legal Professional</h2>
-        <p>Advocate Sobhondeb Ghosh stands as a beacon of justice in Murgeshpalya. With his office conveniently located in S R Layout, Bengaluru, Advocate Ghosh is passionate about delivering exceptional legal services.</p>
-        <p>Offering expert counsel and representation, he works tirelessly to protect the rights and interests of his clients. Trust in Advocate Sobhondeb Ghosh's unwavering commitment to delivering fair outcomes and experience the difference dedicated legal advocacy can make.</p>
-      </div>
+    <div class="container about-content">
+      <h2>A Skilled & Dedicated Legal Professional</h2>
+      <p>Advocate Sobhondeb Ghosh stands as a beacon of justice in Murgeshpalya. With his office conveniently located in S R Layout, Bengaluru, Advocate Ghosh is passionate about delivering exceptional legal services.</p>
+      <p>Offering expert counsel and representation, he works tirelessly to protect the rights and interests of his clients. Trust in Advocate Sobhondeb Ghosh's unwavering commitment to delivering fair outcomes and experience the difference dedicated legal advocacy can make.</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>Get In Touch</h2>
       <div class="contact-wrapper">
         <div class="contact-details">
-          <h3>Contact Information</h3>
           <div class="contact-item">
             <div class="icon"><i class="fas fa-phone-alt"></i></div>
-            <div class="contact-item-text">
-              <p><strong>Phone</strong></p>
-              <p><a href="tel:+918250751491" style="color: #c5a47e; font-weight: bold; text-decoration: none;">+91 8250751491</a></p>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+918250751491" style="color:#c5a47e; font-weight:bold; text-decoration:none;">+91 8250751491</a></p>
             </div>
           </div>
           <div class="contact-item">
             <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-item-text">
-              <p><strong>Address</strong></p>
+            <div>
+              <strong>Address</strong>
               <p>402, Srinivasa Apartment, Obamma Ln, Murugeshpalya, S R Layout, Bengaluru, Karnataka 560017</p>
-              <p class="gmap-line">
-                <strong>Gmap link - </strong>
-                <a href="https://maps.app.goo.gl/9kRAyuubECbeNAhT9" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">https://maps.app.goo.gl/9kRAyuubECbeNAhT9</a>
-              </p>
+              <p><strong>Gmap link - </strong>
+              <a href="https://maps.app.goo.gl/9kRAyuubECbeNAhT9" target="_blank" rel="noopener noreferrer" style="color:blue;">https://maps.app.goo.gl/9kRAyuubECbeNAhT9</a></p>
             </div>
           </div>
         </div>
-
         <div class="map-embed">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.134546416954!2d77.65481307581179!3d12.963236714909873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13e2f056501d%3A0xe443e0f9b3aea41!2s402%2C%20Srinivasa%20Apartment%2C%20Obamma%20Ln%2C%20Murugeshpalya%2C%20S%20R%20Layout%2C%20Bengaluru%2C%20Karnataka%20560017!5e0!3m2!1sen!2sin!4v1715873291244!5m2!1sen!2sin" width="100%" height="350" style="border: 0; border-radius: 5px;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.134546416954!2d77.65481307581179!3d12.963236714909873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13e2f056501d%3A0xe443e0f9b3aea41!2s402%2C%20Srinivasa%20Apartment%2C%20Obamma%20Ln%2C%20Murugeshpalya%2C%20S%20R%20Layout%2C%20Bengaluru%2C%20Karnataka%20560017!5e0!3m2!1sen!2sin!4v1715873291244!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Review Section -->
+  <!-- ✅ Client Reviews Section -->
   <section class="reviews-section">
     <div class="container">
       <h2>Client Reviews</h2>
@@ -247,7 +286,7 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
       <p>&copy; 2025 Advocate Sobhondeb Ghosh | All Rights Reserved</p>
       <p><a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a></p>
