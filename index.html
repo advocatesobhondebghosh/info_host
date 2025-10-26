@@ -83,9 +83,8 @@
             animation: imageSlideshow 21s linear infinite;
             background-repeat: no-repeat;
             background-position: center center;
-            /* ✅ RECTIFICATION: 'contain' shows the full image without cropping. */
             background-size: contain;
-            background-color: #000; /* Black background handles any empty space */
+            background-color: #000;
         }
         .hero-content h1 { font-size: 3.5rem; color: #fff; }
         .hero-content h1 span { color: var(--secondary-color); }
@@ -163,7 +162,9 @@
         .review-image {
           width: 320px;
           height: 400px;
-          background-size: cover;
+          /* ✅ RECTIFICATION: 'contain' displays the full image without cropping */
+          background-size: contain;
+          background-repeat: no-repeat;
           background-position: center;
           border-radius: 10px;
           box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -194,14 +195,16 @@
             flex: 1;
         }
         .contact-item p { margin: 0; line-height: 1.5; font-size: 1.1rem; color: #555; }
-        /* Style for the clickable phone number link */
         .contact-item-text a {
-            color: inherit; /* Makes the link color the same as the paragraph text */
-            text-decoration: none; /* Removes the underline */
-            transition: color 0.3s ease;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
         }
-        .contact-item-text a:hover {
-            color: var(--secondary-color); /* Changes color on hover */
+        /* ✅ RECTIFICATION: Specific style to make the phone number link blue */
+        .phone-link {
+            color: #0000ff; /* Blue color */
+        }
+        .phone-link:hover {
+            opacity: 0.8;
         }
         .contact-item strong { display: block; margin-bottom: 5px; font-size: 1rem; color: #333; }
         .contact-item .gmap-line {
@@ -349,7 +352,6 @@
         </div>
     </section>
     
-    <!-- ✅ Client Reviews Section -->
     <section id="reviews" class="reviews-section">
         <div class="container">
           <h2>Client Reviews</h2>
@@ -357,7 +359,6 @@
             Hear from satisfied clients who have trusted Advocate Sobhondeb Ghosh for their legal needs.
           </p>
           <div class="review-images">
-            <!-- ✅ RECTIFICATION: Image URLs have been updated -->
             <div class="review-image" style="background-image: url('image4.jpg');"></div>
             <div class="review-image" style="background-image: url('image5.jpg');"></div>
           </div>
@@ -374,8 +375,7 @@
                         <div class="icon"><i class="fas fa-phone-alt"></i></div>
                         <div class="contact-item-text">
                             <p><strong>Phone</strong></p>
-                            <!-- ✅ RECTIFICATION: Phone number is now a clickable link -->
-                            <p><a href="tel:+918250751491">+91 8250751491</a></p>
+                            <p><a href="tel:+918250751491" class="phone-link">+91 8250751491</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
